@@ -14,7 +14,7 @@ const sensors=[
     {id:5,name:'电流传感器'},
     {id:6,name:'扭矩传感器'},
 ]
-app.get('/api/sensors/:id',(req,res)=>{
+app.get('/api/sensors/:id',(req,res)=>{ 
     const sensor = sensors.find(c =>c.id === parseInt(req.params.id));
     if (!sensor) { // 404
               return res.status(404).send('The sensor with the given ID was not found!');
